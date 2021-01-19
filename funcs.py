@@ -1,3 +1,4 @@
+import json
 
 def replace(s):
     global funcs
@@ -11,31 +12,31 @@ def replace(s):
             imports[funcs[func][0]] = funcs[func][1]
     return line, imports
 
+funcs = json.load(open("functions.json", "r"))
 
+# upper = """
+# def upper(s):
+#     return str(s).upper()
+# """
 
-upper = """
-def upper(s):
-    return str(s).upper()
-"""
+# isupper = """
+# def isupper(s):
+#     return str(s).isupper()
+# """
 
-isupper = """
-def isupper(s):
-    return str(s).isupper()
-"""
+# lower = """
+# def lower(s):
+#     return str(s).lower()
+# """
 
-lower = """
-def lower(s):
-    return str(s).lower()
-"""
+# islower = """
+# def islower(s):
+#     return str(s).islower()
+# """
 
-islower = """
-def islower(s):
-    return str(s).islower()
-"""
-
-funcs = {
-    "big": ["upper", upper],#[upper, str],
-    "isbig": ["isupper", isupper],#[isupper, bool],
-    "small": ["lower", lower],#[lower, str],
-    "issmall": ["islower", islower]#[islower, bool]
-}
+# funcs = {
+#     "big": ["upper", upper],#[upper, str],
+#     "isbig": ["isupper", isupper],#[isupper, bool],
+#     "small": ["lower", lower],#[lower, str],
+#     "issmall": ["islower", islower]#[islower, bool]
+# }

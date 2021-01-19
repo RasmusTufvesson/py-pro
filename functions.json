@@ -1,0 +1,1 @@
+{"big": ["upper", "\ndef upper(s):\n    return str(s).upper()"], "isbig": ["isupper", "\ndef isupper(s):\n    return str(s).isupper()"], "small": ["lower", "\ndef lower(s):\n    return str(s).lower()"], "issmall": ["islower", "\ndef islower(s):\n    return str(s).islower()"]}
